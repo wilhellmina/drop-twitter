@@ -5,6 +5,3 @@ if (-not(Get-NetFirewallRule | where DisplayName -eq drop-twitter)) {
 }
 
 Set-NetFirewallRule -DisplayName "drop-twitter" -Direction Outbound -Action Block -RemoteAddress $adr -LocalAddress Any
-
-
-
